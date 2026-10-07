@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="description" content="VelvetTouch Beauty: maquillaje y skincare de marcas internacionales con envíos a toda Colombia. Paga seguro en línea.">
+<meta property="og:type" content="website"><meta property="og:locale" content="es_CO"><meta property="og:site_name" content="VelvetTouch Beauty">
+<meta property="og:title" content="VelvetTouch Beauty · Maquillaje y skincare"><meta property="og:description" content="Marcas internacionales, envíos a toda Colombia. Paga seguro en línea.">
+<meta property="og:image" content="https://TUDOMINIO.co/img/og.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f0589b"><link rel="icon" type="image/png" href="/img/favicon.png"><link rel="apple-touch-icon" href="/img/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VelvetTouch Beauty · Maquillaje de lujo</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--bg2:#fbf3f1;--tx:#2a2125;--mu:#8a7a7f;--ac:#c9877f;--ac2:#e9c9c3;--ln:#efe3e0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1518;--bg2:#241b1f;--tx:#f5eceb;--mu:#b5a3a8;--ln:#3a2d32}}
+:root[data-theme="dark"]{--bg:#1b1518;--bg2:#241b1f;--tx:#f5eceb;--mu:#b5a3a8;--ln:#3a2d32}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:400 15px Jost,Helvetica,sans-serif}
+h1,h2,.logo{font-family:'Playfair Display',Georgia,serif;font-weight:400}
+.top{background:var(--ac);color:#fff;text-align:center;font-size:12px;letter-spacing:.12em;padding:8px;text-transform:uppercase}
+header{display:flex;align-items:center;gap:16px;padding:14px 5vw;border-bottom:1px solid var(--ln);position:sticky;top:0;background:var(--bg);z-index:5;flex-wrap:wrap}
+.logo{font-size:26px;letter-spacing:.2em;flex:1}
+header input{border:1px solid var(--ln);background:var(--bg2);color:var(--tx);border-radius:30px;padding:9px 16px;width:min(280px,100%)}
+.cartbtn{border:1px solid var(--tx);background:none;color:var(--tx);border-radius:30px;padding:9px 18px;cursor:pointer;letter-spacing:.08em}
+nav{display:flex;gap:6px 22px;justify-content:center;flex-wrap:wrap;padding:12px 5vw;border-bottom:1px solid var(--ln)}
+nav a{cursor:pointer;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);padding:4px 0;border-bottom:1px solid transparent}
+nav a.on,nav a:hover{color:var(--tx);border-color:var(--ac)}
+.hero{background:linear-gradient(120deg,var(--ac2),var(--bg2));text-align:center;padding:64px 5vw}
+.hero small{letter-spacing:.3em;text-transform:uppercase;color:var(--ac)}
+.hero h1{font-size:clamp(34px,6vw,64px);margin:10px 0}
+.hero p{color:var(--mu);max-width:520px;margin:0 auto 22px}
+.btn{background:var(--tx);color:var(--bg);border:0;border-radius:30px;padding:12px 28px;letter-spacing:.1em;text-transform:uppercase;font-size:12px;cursor:pointer}
+.promos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;padding:26px 5vw}
+.promo{background:var(--bg2);border:1px solid var(--ln);padding:18px;text-align:center}
+.promo b{font-family:'Playfair Display',serif;font-size:22px;color:var(--ac);display:block}
+.bar{display:flex;gap:10px;align-items:center;padding:0 5vw 6px;flex-wrap:wrap}
+select{border:1px solid var(--ln);background:var(--bg);color:var(--tx);padding:8px 12px;border-radius:20px}
+h2{text-align:center;font-size:30px;margin:30px 0 6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:22px;padding:18px 5vw 50px}
+.card{text-align:center}
+.ph{aspect-ratio:1;display:grid;place-items:center;position:relative;overflow:hidden}
+.ph{background:#fff}.ph img{width:100%;height:100%;object-fit:contain}
+.ph span{font:400 44px 'Playfair Display',serif;color:#fff;text-shadow:0 2px 12px #0002}
+.tag{position:absolute;top:10px;left:10px;background:var(--ac);color:#fff;font-size:11px;padding:3px 9px;letter-spacing:.06em}
+.br{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);margin-top:10px}
+.nm{margin:4px 0;min-height:38px}
+.old{text-decoration:line-through;color:var(--mu);margin-right:6px;font-size:13px}
+.add{margin-top:8px;border:1px solid var(--tx);background:none;color:var(--tx);padding:8px 20px;cursor:pointer;letter-spacing:.08em;font-size:12px;text-transform:uppercase}
+.add:hover{background:var(--tx);color:var(--bg)}
+#drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,100%);background:var(--bg);border-left:1px solid var(--ln);transform:translateX(100%);transition:.3s;z-index:9;display:flex;flex-direction:column;padding:20px;padding-top:calc(20px + env(safe-area-inset-top,0px))}
+#drawer.open{transform:none}
+.items{flex:1;overflow:auto}
+.it{display:flex;justify-content:space-between;gap:8px;padding:10px 0;border-bottom:1px solid var(--ln);font-size:14px}
+.q button{width:24px;border:1px solid var(--ln);background:none;color:var(--tx);cursor:pointer}
+.cp{display:flex;gap:6px;margin:10px 0}.cp input{flex:1;border:1px solid var(--ln);background:var(--bg2);color:var(--tx);padding:9px}
+.row{display:flex;justify-content:space-between;margin:4px 0}
+footer{background:var(--bg2);text-align:center;padding:30px;color:var(--mu);font-size:13px}
+
+:root{--ac:#f0589b;--ac2:#ffc9e0;--bg2:#fff0f6;--ln:#f9d6e6;--tx:#3a2230;--mu:#a07a8e}
+.top{background:linear-gradient(90deg,#f0589b,#ff8cbc,#f0589b);letter-spacing:.2em}
+.logo{color:var(--ac);font-style:italic;letter-spacing:.14em}
+header{box-shadow:0 4px 18px #f0589b14}
+header input{border-color:var(--ac2)}
+.cartbtn{border-color:var(--ac);color:var(--ac);background:#fff0}.cartbtn:hover{background:var(--ac);color:#fff}
+nav a{border:1px solid var(--ac2);border-radius:30px;padding:6px 16px;color:var(--ac)}
+nav a.on,nav a:hover{background:var(--ac);color:#fff;border-color:var(--ac)}
+nav{gap:8px}
+.hero{background:radial-gradient(circle at 15% 20%,#ffd3e6,transparent 45%),radial-gradient(circle at 85% 80%,#ffc2dc,transparent 45%),#fff0f6;padding:80px 5vw}
+.hero small{color:var(--ac);letter-spacing:.35em}.hero h1{font-style:italic;color:var(--ac)}
+.hero h1::after{content:" ✿";font-size:.6em}
+.btn{background:var(--ac);color:#fff;box-shadow:0 8px 20px #f0589b44}
+.promo{border-radius:20px;border:1px solid var(--ac2);background:linear-gradient(160deg,#fff,var(--bg2))}
+h2{font-style:italic;color:var(--ac)}
+select{border-color:var(--ac2);color:var(--ac)}
+.grid{gap:20px}
+.card{background:var(--bg,#fff);border:1px solid var(--ln);border-radius:22px;padding:12px 12px 16px;transition:.25s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #f0589b26}
+.ph{border-radius:16px}
+.tag{background:var(--ac);border-radius:20px;padding:4px 11px}
+.br{color:var(--ac)}.nm b,.card b{color:var(--tx)}
+.add{border-color:var(--ac);color:var(--ac);border-radius:30px;padding:9px 24px}.add:hover{background:var(--ac);color:#fff}
+#drawer{border-radius:24px 0 0 24px;box-shadow:-10px 0 40px #f0589b22}
+footer{background:linear-gradient(#fff0f6,#ffd9ea);color:var(--ac)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg2:#2a1a23;--ln:#46293a;--tx:#fbeaf2;--mu:#c9a3b5}.promo{background:var(--bg2)}footer{background:var(--bg2)}}
+
+#ck{position:fixed;inset:0;background:#3a223088;z-index:20;display:none;align-items:center;justify-content:center;padding:14px}
+#ck.open{display:flex}
+#ck .box{background:var(--bg);color:var(--tx);border-radius:24px;max-width:460px;width:100%;max-height:92vh;overflow:auto;padding:22px;border:1px solid var(--ln)}
+#ck h3{font:italic 400 26px 'Playfair Display',serif;color:var(--ac);margin:0 0 10px}
+#ck input[type=text],#ck input[type=tel],#ck textarea{width:100%;border:1px solid var(--ac2);background:var(--bg2);color:var(--tx);border-radius:12px;padding:10px;margin:4px 0 8px;font:inherit}
+.pm{display:flex;gap:10px;align-items:center;border:1px solid var(--ln);border-radius:14px;padding:10px 12px;margin:6px 0;cursor:pointer}
+.pm.off{opacity:.45;cursor:not-allowed}.pm small{color:var(--mu)}
+.pm:has(input:checked){border-color:var(--ac);background:var(--bg2)}
+#ck .num{font-size:24px;letter-spacing:.08em;color:var(--ac);font-weight:500;text-align:center;margin:8px 0}
+#ck .steps{font-size:13px;color:var(--mu);line-height:1.6}
+.promo{cursor:pointer;transition:.25s}.promo:hover{transform:translateY(-3px);box-shadow:0 10px 24px #f0589b2a}
+.fv{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;border:0;background:#fffc;color:#d9bfcb;font-size:18px;cursor:pointer;line-height:1}
+.fv.on{color:var(--ac)}
+.sold{position:absolute;inset:auto 0 0 0;background:#3a2230cc;color:#fff;text-align:center;padding:6px;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.add:disabled{opacity:.4;cursor:not-allowed}
+.tonos{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+.tn{border:1px solid var(--ac2);background:none;color:var(--tx);border-radius:20px;padding:6px 12px;cursor:pointer;font:inherit;font-size:13px}
+.tn.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.dm .ph{max-width:300px;margin:0 auto 10px}
+.dm .btn{width:100%;margin:6px 0}
+#pl{position:fixed;inset:0;background:#3a223099;z-index:30;display:none;align-items:center;justify-content:center;padding:14px}
+#pl.open{display:flex}
+#pl .box{background:var(--bg);color:var(--tx);border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow:auto;padding:22px;border:1px solid var(--ln);line-height:1.6;font-size:14px}
+#pl h3{font:italic 400 26px 'Playfair Display',serif;color:var(--ac);margin:0 0 8px}
+#pl details{border-bottom:1px solid var(--ln);padding:8px 0}#pl summary{cursor:pointer;font-weight:500}
+.wa{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));background:#25d366;color:#fff;text-decoration:none;border-radius:30px;padding:12px 18px;font-size:14px;box-shadow:0 8px 24px #0003;z-index:8}
+.fl{display:flex;gap:6px 18px;justify-content:center;flex-wrap:wrap;margin-bottom:10px}.fl a{color:var(--ac);cursor:pointer;text-decoration:underline}
+.top b{font-weight:500}
+.dot{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:1px solid #0002}.sw{height:46px;border-radius:14px;margin:6px 0 8px;display:flex;align-items:center;justify-content:center;font-size:13px;background:var(--bg2);color:var(--mu);transition:background .25s}@media(max-width:700px){nav{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;scrollbar-width:none;-webkit-overflow-scrolling:touch}nav::-webkit-scrollbar{display:none}nav a{white-space:nowrap;flex:none}}
+</style></head><body>
+<div class="top"><span id="bdw">Black Days · 15% en productos seleccionados · <span id="cdw">termina en <b id="cd"></b> · </span></span>Envío gratis desde $250.000 · Envíos solo en Colombia</div>
+<header><div class="logo" style="letter-spacing:0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 60" height="46" role="img" aria-label="VelvetTouch Beauty"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9ac6"/><stop offset="1" stop-color="#f0589b"/></linearGradient></defs><circle cx="30" cy="30" r="26" fill="url(#lg)"/><path d="M30 45C13 33.500 15 20.500 23.500 20.500C27 20.500 29.500 23 30 24.500C30.500 23 33 20.500 36.500 20.500C45 20.500 47 33.500 30 45Z" fill="#fff"/><path d="M45 9l1.700 4.600 4.600 1.700-4.600 1.700L45 21.600l-1.700-4.600-4.600-1.700 4.600-1.700z" fill="#fff"/><text x="66" y="35" font-family="'Playfair Display',Georgia,serif" font-style="italic" font-size="30" fill="url(#lg)">VelvetTouch</text><text x="68" y="53" font-family="Jost,Arial,sans-serif" font-size="10" letter-spacing="7.500" fill="#f0589b">BEAUTY</text></svg></div><input id="q" placeholder="Buscar productos o marcas…"><button class="cartbtn" onclick="tg()">Carrito (<span id="n">0</span>)</button></header>
+<nav id="nav"></nav>
+<section class="hero"><small>Colección de lujo</small><h1>Tu belleza, elevada</h1><p>Las mejores marcas internacionales de maquillaje y skincare, en pesos colombianos.</p><button class="btn" onclick="document.getElementById('cat').scrollIntoView({behavior:'smooth'})">Comprar ahora</button></section>
+<section class="promos"><div class="promo" onclick="go('Black Days')"><b>Black Days</b>15% en productos seleccionados por 20 días</div><div class="promo" onclick="go('2x1 Skincare')"><b>2x1 Skincare</b>En The Ordinary y Medicube</div><div class="promo" onclick="useCode()"><b>BELLA10</b>10% extra en tu primera compra</div><div class="promo" onclick="go('Todo')"><b>Envío gratis</b>En compras desde $250.000</div></section>
+<h2 id="cat">Catálogo <small style="font-size:14px;color:var(--mu)">(<span id="cnt"></span> productos)</small></h2>
+<div class="bar" style="justify-content:center"><select id="br"></select><select id="so"><option value="">Ordenar</option><option value="a">Precio: menor a mayor</option><option value="d">Precio: mayor a menor</option></select></div>
+<div class="grid" id="g"></div>
+<footer><div class="fl"><a onclick="pol('nosotros')">Quiénes somos</a><a onclick="pol('faq')">Preguntas frecuentes</a><a onclick="pol('envios')">Envíos</a><a onclick="pol('cambios')">Cambios y devoluciones</a><a onclick="pol('datos')">Política de datos</a><a onclick="pol('terminos')">Términos y condiciones</a></div>© 2026 VelvetTouch · Envíos únicamente en Colombia · Precios en COP, IVA incluido</footer>
+<aside id="drawer"><div class="row"><h2 style="margin:0;font-size:24px">Tu carrito</h2><button class="add" style="margin:0" onclick="tg()">Cerrar</button></div>
+<div class="items" id="its"></div>
+<div class="cp"><input id="cc" placeholder="Código (BELLA10)"><button class="add" style="margin:0" onclick="ap()">Aplicar</button></div>
+<div class="row"><span>Subtotal</span><span id="sb"></span></div><div class="row"><span>Descuento</span><span id="ds"></span></div><div class="row"><span>Envío</span><span id="en"></span></div>
+<div class="row"><b>Total</b><b id="tt"></b></div><button class="btn" style="margin-top:12px" onclick="openCk()">Finalizar compra</button></aside>
+<script>
+// Para imágenes reales: pega la URL de cada producto en el campo "img" (ej. img:"https://...").
+const P=[["Iluminadores","Dior","Backstage Glow Face Palette",272000,0,"img/p0.jpg"],["Labiales","Dior","Addict Lip Glow Oil",181000,0,"img/p1.jpg"],["Rubores","Dior","Backstage Rosy Glow Blush",190000,15,"img/p2.jpg"],["Rubores","Dior","Forever Blush Soft Filter Líquido",204000,0,"img/p3.jpg"],["Base","Dior","Backstage Face & Body Foundation",204000,0,"img/p4.jpg"],["Polvos y fijadores","Charlotte Tilbury","Airbrush Flawless Finish Powder",236000,0,"img/p5.jpg"],["Polvos y fijadores","Charlotte Tilbury","Airbrush Flawless Setting Spray",172000,15,"img/p6.jpg"],["Labiales","Charlotte Tilbury","Lip Cheat Lip Liner",113000,0,"img/p7.jpg"],["Base","Charlotte Tilbury","Hollywood Flawless Filter",222000,0,"img/p8.jpg"],["Iluminadores","Charlotte Tilbury","Glowgasm Beauty Light Wand",190000,0,"img/p9.jpg"],["Iluminadores","Fenty Beauty","Diamond Bomb Highlighter",181000,15,"img/p10.jpg"],["Ojos","Fenty Beauty","Full Frontal Mascara",118000,0,"img/p11.jpg"],["Labiales","Fenty Beauty","Gloss Bomb Cream",109000,15,"img/p12.jpg"],["Contornos","Fenty Beauty","Match Stix Contour",145000,15,"img/p13.jpg"],["Base","Fenty Beauty","Pro Filt'r Soft Matte Foundation",181000,15,"img/p14.jpg"],["Correctores","NARS","Radiant Creamy Concealer",145000,0,"img/p15.jpg"],["Base","NARS","Natural Radiant Longwear Foundation",236000,15,"img/p16.jpg"],["Rubores","NARS","Blush en Polvo",159000,0,"img/p17.jpg"],["Rubores","NARS","The Multiple Stick",181000,0,"img/p18.jpg"],["Polvos y fijadores","NARS","Light Reflecting Loose Setting Powder",172000,0,"img/p19.jpg"],["Correctores","Too Faced","Born This Way Sculpting Concealer",150000,15,"img/p20.jpg"],["Polvos y fijadores","Too Faced","Born This Way Setting Powder",163000,0,"img/p21.jpg"],["Rubores","Too Faced","Cloud Crush Blush",145000,15,"img/p22.jpg"],["Ojos","Too Faced","Better Than Sex Mascara",136000,15,"img/p23.jpg"],["Contornos","Too Faced","Chocolate Soleil Bronzer Stick",154000,0,"img/p24.jpg"],["Contornos","Too Faced","Chocolate Soleil Matte Bronzer",163000,0,"img/p25.jpg"],["Base","L'Oréal","Infaillible 32H Fresh Wear Foundation",73000,15,"img/p26.jpg"],["Base","L'Oréal","Infaillible 24H Fresh Wear Powder Foundation",77000,0,"img/p27.jpg"],["Polvos y fijadores","L'Oréal","Infaillible 3-Second Setting Mist",68000,0,"img/p28.jpg"],["Base","L'Oréal","True Match Nude Hyaluronic Tinted Serum",82000,0,"img/p29.jpg"],["Correctores","L'Oréal","Infaillible More Than Full Wear Concealer",59000,0,"img/p30.jpg"],["Polvos y fijadores","Huda Beauty","Easy Bake Loose Powder Duo",172000,0,"img/p31.jpg"],["Polvos y fijadores","Huda Beauty","Easy Bake Loose Powder Pink",172000,0,"img/p32.jpg"],["Correctores","Huda Beauty","Faux Filter Concealer",122000,0,"img/p33.jpg"],["Rubores","Huda Beauty","Blush Líquido Rosa",109000,0,"img/p34.jpg"],["Polvos y fijadores","Huda Beauty","Polvo Compacto Pressed",154000,0,"img/p35.jpg"],["Ojos","Maybelline","Lash Sensational Sky High",59000,15,"img/p36.jpg"],["Ojos","Maybelline","Falsies Surreal Extensions",54000,0,"img/p37.jpg"],["Labiales","Maybelline","SuperStay Teddy Tint",54000,15,"img/p38.jpg"],["Polvos y fijadores","Maybelline","Fit Me Matte + Poreless Powder",36000,15,"img/p39.jpg"],["Correctores","Maybelline","Instant Age Rewind Eraser",50000,15,"img/p40.jpg"],["Base","Maybelline","Fit Me Fresh Tint",59000,0,"img/p41.jpg"],["Base","e.l.f.","Power Grip Primer",58000,0,"img/p42.jpg"],["Iluminadores","e.l.f.","Halo Glow Liquid Filter",82000,15,"img/p43.jpg"],["Contornos","e.l.f.","Bronzer & Contour Líquido",47000,0,"img/p44.jpg"],["Labiales","e.l.f.","Glossy Lip Oil",53000,0,"img/p45.jpg"],["Polvos y fijadores","e.l.f.","Halo Glow Setting Powder",53000,0,"img/p46.jpg"],["Contornos","Benefit","Hoola Matte Bronzer",163000,15,"img/p47.jpg"],["Labiales","Benefit","Benetint Lip & Cheek Stain",145000,15,"img/p48.jpg"],["Iluminadores","Benefit","Cookie Powder Highlighter",145000,0,"img/p49.jpg"],["Polvos y fijadores","Laura Mercier","Translucent Loose Setting Powder",204000,0,"img/p50.jpg"],["Rubores","Pixi","On-the-Glow Blush",91000,15,"img/p51.jpg"],["Contornos","Pixi","On-the-Glow Bronze",91000,0,"img/p52.jpg"],["Rubores","Rare Beauty","Soft Pinch Liquid Blush",113000,0,"img/p53.jpg"],["Rubores","Rare Beauty","Soft Pinch Luminous Powder Blush",104000,0,"img/p54.jpg"],["Iluminadores","Rare Beauty","Positive Light Highlighter",113000,0,"img/p55.jpg"],["Rubores","Rare Beauty","Soft Pinch Blush en Crema",104000,0,"img/p56.jpg"],["Correctores","Rare Beauty","Liquid Touch Brightening Concealer",100000,0,"img/p57.jpg"],["Contornos","Rare Beauty","Warm Wishes Effortless Bronzer Stick",109000,0,"img/p58.jpg"],["Skincare","Centella","Tone Brightening Capsule Ampoule",100000,0,"img/p59.jpg"],["Skincare","Centella","Centella Ampoule",86000,15,"img/p60.jpg"],["Skincare","Centella","Centella Soothing Cream",100000,0,"img/p61.jpg"],["Skincare","Centella","Hyalu-Cica Blue Serum",100000,15,"img/p62.jpg"],["Skincare","Centella","Hyalu-Cica First Ampoule",109000,0,"img/p63.jpg"],["Skincare","Medicube","Collagen Jelly Cream",131000,0,"img/p64.jpg"],["Skincare","Medicube","Zero Pore Cream 2.0",118000,0,"img/p65.jpg"],["Skincare","Medicube","PDRN Pink Peptide Serum",131000,0,"img/p66.jpg"],["Skincare","Medicube","PDRN Pink Collagen Exosome Shot 7500",177000,0,"img/p67.jpg"],["Skincare","Medicube","Zero Pore Pad",82000,0,"img/p68.jpg"],["Skincare","Medicube","PDRN Pink Collagen Capsule Cream",163000,0,"img/p69.jpg"],["Skincare","Medicube","Hyaluronic Moisturizing Capsule Cream",136000,0,"img/p70.jpg"],["Skincare","The Ordinary","Niacinamide 10% + Zinc 1%",29000,0,"img/p71.jpg"],["Skincare","The Ordinary","Glycolic Acid 7% Exfoliating Toner",45000,0,"img/p72.jpg"],["Skincare","The Ordinary","Glycolic Acid 7% Toning Solution",45000,0,"img/p73.jpg"],["Skincare","The Ordinary","Balancing & Clarifying Serum",63000,0,"img/p74.jpg"],["Cejas","The Ordinary","Multi-Peptide Lash and Brow Serum",82000,0,"img/p75.jpg"],["Protección solar","ISDIN","Fotoprotector Fusion Water Magic SPF 50",163000,15,"img/p76.jpg"],["Protección solar","ISDIN","Fotoultra 100 Spot Prevent SPF 50+",172000,0,"img/p77.jpg"],["Protección solar","ISDIN","Fotoultra 100 Active Unify SPF 50+",190000,0,"img/p78.jpg"],["Protección solar","Tocobo","Cotton Soft Sun Stick SPF 50",82000,15,"img/p79.jpg"],["Protección solar","Tocobo","Bio Watery Sun Cream SPF 50",91000,0,"img/p80.jpg"],["Protección solar","Tocobo","Cica Cooling Sun Stick SPF 50",82000,0,"img/p81.jpg"],["Rubores","Patrick Ta","Double-Take Crème & Powder Blush Duo",218000,0,"img/p82.jpg"],["Contornos","Patrick Ta","Major Sculpt Bronzer Duo",245000,0,"img/p83.jpg"],["Labiales","Dior","Addict Lipstick",190000,0,"img/p84.jpg"],["Cejas","Rare Beauty","Brow Harmony Gel",91000,0,"img/p85.jpg"],["Cejas","Maybelline","Gel de Cejas Amarillo",45000,0,"img/p86.jpg"]].map((a,i)=>({id:i,cat:a[0],br:a[1],nm:a[2],pr:a[3],off:a[4],img:a[5]||""}));
+const cop=n=>"$"+Math.round(n).toLocaleString("es-CO");
+const DOS=["The Ordinary","Medicube"];const cats=["Todo","Black Days","2x1 Skincare",...new Set(P.map(p=>p.cat))];let cur="Todo",cart={},disc=0;
+const $=id=>document.getElementById(id);
+$("nav").innerHTML=cats.map(c=>`<a data-c="${c}">${c}</a>`).join("");
+$("nav").onclick=e=>{if(e.target.dataset.c){cur=e.target.dataset.c;render()}};
+$("br").innerHTML='<option value="">Todas las marcas</option>'+[...new Set(P.map(p=>p.br))].sort().map(b=>`<option>${b}</option>`).join("");
+["q","br","so"].forEach(i=>$(i).oninput=render);
+const fin=p=>p.off?p.pr*(1-p.off/100):p.pr;
+function render(){
+ document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.c===cur));
+ let l=P.filter(p=>(cur=="Todo"||(cur=="Black Days"?p.off>0:cur=="2x1 Skincare"?(DOS.includes(p.br)&&p.cat=="Skincare"):p.cat==cur))&&(!$("br").value||p.br==$("br").value)&&(p.nm+p.br).toLowerCase().includes($("q").value.toLowerCase()));
+ if($("so").value)l.sort((a,b)=>$("so").value=="a"?fin(a)-fin(b):fin(b)-fin(a));
+ $("g").innerHTML=l.map(p=>`<div class="card"><div class="ph">${p.img?`<img src="${p.img}" alt="${p.nm}">`:`<span>${p.br[0]}</span>`}${p.off?`<div class="tag">-${p.off}% BLACK DAYS</div>`:""}</div><div class="br">${p.br}</div><div class="nm">${p.nm}</div><div>${p.off?`<span class="old">${cop(p.pr)}</span>`:""}<b>${cop(fin(p))}</b></div><button class="add" onclick="add(${p.id})">Agregar</button></div>`).join("")||"<p style='grid-column:1/-1;text-align:center;color:var(--mu)'>Sin resultados</p>";
+}
+function add(i){cart[i]=(cart[i]||0)+1;draw();$("drawer").classList.add("open")}
+function ch(i,d){cart[i]+=d;if(cart[i]<=0)delete cart[i];draw()}
+function ap(){const c=$("cc").value.trim().toUpperCase();disc=c=="BELLA10"?.1:0;if(!disc)alert("Código no válido");draw()}
+function go(c){cur=c;render();$("cat").scrollIntoView({behavior:"smooth"})}
+function useCode(){$("cc").value="BELLA10";ap();$("drawer").classList.add("open")}
+function cuotas(){$("ckb").innerHTML=`<h3>Pago en cuotas</h3><p class="steps">Muy pronto podrás pagar hasta en 12 cuotas con tarjeta de crédito y Addi. Por ahora recibimos pagos por <b>Nequi</b> y <b>Bancolombia</b>.</p><button class="btn" style="width:100%" onclick="ckX()">Entendido</button>`;$("ck").classList.add("open")}
+function tg(){$("drawer").classList.toggle("open")}
+function draw(){
+ const ids=Object.keys(cart);let s=0;
+ $("its").innerHTML=ids.map(i=>{const p=P[i],t=fin(p)*cart[i];s+=t;return`<div class="it"><div><small>${p.br}</small><br>${p.nm}</div><div class="q"><button onclick="ch(${i},-1)">−</button> ${cart[i]} <button onclick="ch(${i},1)">+</button><br>${cop(t)}</div></div>`}).join("")||"<p style='color:var(--mu)'>Tu carrito está vacío</p>";
+ let d2=0;ids.forEach(i=>{const p=P[i];if(DOS.includes(p.br)&&p.cat=="Skincare")d2+=Math.floor(cart[i]/2)*fin(p)});const d=(s-d2)*disc+d2,e=s==0||s-d>=250000?0:12000;
+ $("n").textContent=ids.reduce((a,i)=>a+cart[i],0);$("sb").textContent=cop(s);$("ds").textContent="-"+cop(d);$("en").textContent=e?cop(e):"Gratis";$("tt").textContent=cop(s-d+e);
+}
+render();draw();$("cnt").textContent=P.length;
+</script><div id="ck"><div class="box" id="ckb"></div></div>
+<script>
+// === CONFIGURA AQUÍ TU NÚMERO (sin espacios, 10 dígitos) ===
+const CFG={num:"3186315735",titular:""};
+const ready=()=>/^3\d{9}$/.test(CFG.num);
+const num=()=>ready()?CFG.num.replace(/(\d{3})(\d{3})(\d{4})/,"$1 $2 $3"):"(número pendiente)";
+function openCk(){
+ if(!Object.keys(cart).length){alert("Tu carrito está vacío");return}
+ $("ckb").innerHTML=`<h3>Finalizar compra</h3>
+ <input type="text" id="ckn" placeholder="Nombre completo"><input type="tel" id="ckt" placeholder="Celular / WhatsApp"><p class="steps" style="margin:0 0 8px">🇨🇴 Solo realizamos envíos dentro de <b>Colombia</b>.</p><input type="text" value="Colombia" readonly style="opacity:.7"><select id="ckc" style="width:100%;margin:4px 0 8px;padding:10px;border-radius:12px" onchange="$('cko').style.display=this.value=='Otra'?'block':'none'"><option value="">Selecciona tu ciudad</option><option>Bogotá D.C. (Cundinamarca)</option><option>Medellín (Antioquia)</option><option>Cali (Valle del Cauca)</option><option>Barranquilla (Atlántico)</option><option>Cartagena (Bolívar)</option><option>Cúcuta (Norte de Santander)</option><option>Bucaramanga (Santander)</option><option>Pereira (Risaralda)</option><option>Santa Marta (Magdalena)</option><option>Ibagué (Tolima)</option><option>Manizales (Caldas)</option><option>Pasto (Nariño)</option><option>Villavicencio (Meta)</option><option>Montería (Córdoba)</option><option>Neiva (Huila)</option><option>Armenia (Quindío)</option><option>Valledupar (Cesar)</option><option>Popayán (Cauca)</option><option>Sincelejo (Sucre)</option><option>Tunja (Boyacá)</option><option>Riohacha (La Guajira)</option><option>Florencia (Caquetá)</option><option>Yopal (Casanare)</option><option>Quibdó (Chocó)</option><option>Buenaventura (Valle del Cauca)</option><option>Palmira (Valle del Cauca)</option><option>Tuluá (Valle del Cauca)</option><option>Soacha (Cundinamarca)</option><option>Bello (Antioquia)</option><option>Itagüí (Antioquia)</option><option>Envigado (Antioquia)</option><option>Soledad (Atlántico)</option><option>Floridablanca (Santander)</option><option>Girón (Santander)</option><option>Dosquebradas (Risaralda)</option><option>Ipiales (Nariño)</option><option>Tumaco (Nariño)</option><option>Barrancabermeja (Santander)</option><option>Sogamoso (Boyacá)</option><option>Duitama (Boyacá)</option><option>Girardot (Cundinamarca)</option><option>Zipaquirá (Cundinamarca)</option><option>Chía (Cundinamarca)</option><option>Rionegro (Antioquia)</option><option>Jamundí (Valle del Cauca)</option><option>Cartago (Valle del Cauca)</option><option>Maicao (La Guajira)</option><option>Ciénaga (Magdalena)</option><option>Arauca (Arauca)</option><option>San Andrés (San Andrés y Providencia)</option><option value="Otra">Otra ciudad de Colombia…</option></select><input type="text" id="cko" placeholder="Escribe tu ciudad y departamento" style="display:none"><textarea id="cka" rows="2" placeholder="Dirección de entrega"></textarea>
+ <b>Método de pago</b>
+ <label class="pm"><input type="radio" name="pm" value="Nequi" checked> <div>Nequi<br><small>Transferencia a nuestro número</small></div></label>
+ <label class="pm"><input type="radio" name="pm" value="Bancolombia"> <div>Bancolombia / A la Mano<br><small>Transferencia a nuestro número</small></div></label>
+ <label class="pm"><input type="radio" name="pm" value="Tarjeta"> <div>Tarjeta Visa / Mastercard<br><small>Crédito o débito · te enviamos un link de pago seguro</small></div></label><label class="pm off"><input type="radio" disabled> <div>PSE · Addi<br><small>Próximamente</small></div></label>
+ <div class="row" style="margin-top:10px"><b>Total a pagar</b><b>${$("tt").textContent}</b></div>
+ <button class="btn" style="width:100%;margin-top:12px" onclick="ckGo()">Continuar</button>
+ <button class="add" style="width:100%" onclick="ckX()">Cancelar</button>`;
+ $("ck").classList.add("open")}
+function ckX(){$("ck").classList.remove("open")}
+function ckGo(){
+ const n=$("ckn").value.trim(),t=$("ckt").value.trim(),c=($("ckc").value=="Otra"?$("cko").value.trim():$("ckc").value),d=$("cka").value.trim();
+ if(!n||!t||!c||!d){alert("Completa tus datos de entrega");return}
+ const pm=document.querySelector('input[name=pm]:checked').value,tot=$("tt").textContent;
+ const L=Object.keys(cart).map(i=>`• ${cart[i]} x ${P[i].br} ${P[i].nm}`).join("\n");
+ const msg=`Hola, hermosa! 💗 Quiero confirmar mi pedido 💗\n\n🛍️ Mi pedido:\n${L}\n\n💰 Total: ${tot}\n💳 Pago: ${pm}\n\n✨ Datos de entrega ✨\n👩 Nombre: ${n}\n📱 Celular: ${t}\n📍 Ciudad: ${c}, Colombia\n🏠 Dirección: ${d}\n\nTe envío mi comprobante de pago 🎀 Gracias! 🌸`;
+ if(pm=="Tarjeta"){const m2=msg.replace("Te envío mi comprobante de pago 🎀","Quiero pagar con tarjeta, por favor envíame el link de pago 🎀");
+ $("ckb").innerHTML=`<h3>Pago con tarjeta</h3><p class="steps">1. Pulsa el botón y envíanos tu pedido por WhatsApp.<br>2. Te respondemos con un <b>link de pago seguro</b> por el valor exacto de <b>${tot}</b>.<br>3. Pagas con tu tarjeta Visa o Mastercard (crédito o débito) y despachamos tu pedido.</p>
+ <a class="btn" style="display:block;text-align:center;text-decoration:none;margin-top:8px" target="_blank" rel="noopener" href="https://wa.me/57${CFG.num}?text=${encodeURIComponent(m2)}">Enviar pedido por WhatsApp</a>
+ <button class="add" style="width:100%;margin-top:8px" onclick="ckX()">Cerrar</button>`;return}
+ $("ckb").innerHTML=`<h3>Paga con ${pm}</h3>
+ <p class="steps">1. Abre ${pm} y envía <b>${tot}</b> a este número:</p>
+ <div class="num">${num()}</div>${CFG.titular?`<p class="steps" style="text-align:center">A nombre de ${CFG.titular}</p>`:""}
+ <button class="add" style="width:100%" onclick="try{navigator.clipboard.writeText('${CFG.num}')}catch(e){};this.textContent='¡Copiado!'">Copiar número</button>
+ <p class="steps">2. Toma captura del comprobante.<br>3. Pulsa el botón y envíanos el pedido por WhatsApp junto con el comprobante. Confirmamos tu pago y despachamos.</p>
+ ${ready()?`<a class="btn" style="display:block;text-align:center;text-decoration:none;margin-top:8px" target="_blank" rel="noopener" href="https://wa.me/57${CFG.num}?text=${encodeURIComponent(msg)}">Enviar pedido por WhatsApp</a>`:`<p class="steps" style="color:var(--ac)">⚠ Falta configurar el número de pago de la tienda.</p>`}
+ <button class="add" style="width:100%;margin-top:8px" onclick="ckX()">Cerrar</button>`}
+</script>
+<div id="pl" onclick="if(event.target==this)plX()"><div class="box" id="plb"></div></div><a class="wa" target="_blank" rel="noopener" href="https://wa.me/573186315735?text=Hola%2C%20quiero%20informaci%C3%B3n%20%F0%9F%92%97">💬 Escríbenos</a><script>
+// ===== CONFIGURACIÓN EDITABLE =====
+const AGOTADOS=[]; // nombres exactos de productos agotados, ej: ["Hoola Matte Bronzer"]
+const BLACK_END=new Date("2026-10-27T23:59:59-05:00"); // fin de Black Days
+const TONOS=["Porcelana","Marfil","Beige claro","Beige","Arena","Miel","Canela","Caramelo","Café","Espresso"];
+const TCOL={"Porcelana":"#f6dccb","Marfil":"#f1d3b8","Beige claro":"#e8c4a0","Beige":"#deb48c","Arena":"#d3a579","Miel":"#c48f5f","Canela":"#b17a4d","Caramelo":"#9d6637","Café":"#7a4a2b","Espresso":"#4f2e1d"};
+// Fotos por tono (opcional): {"Nombre del producto":{"Beige":"data:image/jpeg;base64,..."}}. Si no hay foto, se muestra la muestra de color.
+const SHADEIMG={};
+const SKIN=TONOS.map(t=>[t,TCOL[t]]);
+const TSET={"Base":SKIN,"Correctores":SKIN,
+"Polvos y fijadores":[["Translúcido","#f3e9df"],["Claro","#ecd2b5"],["Medio","#d9ae82"],["Profundo","#8a5a3a"]],
+"Contornos":[["Claro","#d2a47a"],["Medio","#b57f55"],["Bronceado","#98633d"],["Profundo","#6a3f26"]],
+"Iluminadores":[["Champagne","#f2dcc0"],["Perla","#f4ece8"],["Rosa","#f4c4cf"],["Dorado","#e3bf7a"],["Bronce","#c48b5c"]],
+"Rubores":[["Rosa suave","#f4b6c8"],["Durazno","#f7b79a"],["Coral","#f08a76"],["Fucsia","#e8498f"],["Malva","#c47a9a"],["Ciruela","#9a4565"]],
+"Labiales":[["Nude","#c99a85"],["Rosa","#e87aa3"],["Coral","#f0705f"],["Rojo","#c4222f"],["Berry","#9b2d5e"],["Vino","#6d1f35"]],
+"Ojos":[["Negro","#1e1a1b"],["Marrón","#5a3a2c"]],
+"Cejas":[["Rubio","#b99468"],["Castaño claro","#8b6a4a"],["Castaño","#614430"],["Marrón oscuro","#3f2b21"],["Negro","#1e1a1b"]]};
+// Skincare y Protección solar no llevan tonos; tampoco sprays, brumas ni el sérum de pestañas
+function tset(p){return TSET[p.cat]&&!/Spray|Mist|Lash and Brow Serum/i.test(p.nm)?TSET[p.cat]:null}
+function lum(h){const n=parseInt(h.slice(1),16);return .299*(n>>16)+.587*(n>>8&255)+.114*(n&255)}
+let _cp=0;
+const ZA=["Bogotá D.C.","Medellín","Cali","Barranquilla","Cartagena","Bucaramanga","Pereira","Manizales","Armenia","Envigado","Bello","Itagüí","Soacha","Chía","Floridablanca","Dosquebradas","Jamundí","Palmira"];
+const ZC=["Tumaco","Quibdó","Florencia","Riohacha","Yopal","Maicao","Arauca","San Andrés"];
+const COSTOS={A:[11000,"1 a 3 días hábiles"],B:[15000,"3 a 5 días hábiles"],C:[25000,"5 a 8 días hábiles"]};
+// ===================================
+const hasTono=p=>!!tset(p);
+const DESC={"Base":"Base para un acabado uniforme y natural. Elige el tono más parecido a tu piel.","Correctores":"Corrector para cubrir ojeras e imperfecciones. Elige el tono más parecido a tu piel.","Polvos y fijadores":"Fija tu maquillaje y controla el brillo durante todo el día.","Contornos":"Define y esculpe tu rostro con un efecto natural.","Iluminadores":"Luz y glow en los puntos altos del rostro.","Rubores":"Color y frescura para tus mejillas.","Labiales":"Color y confort para tus labios.","Ojos":"Pestañas con volumen y definición.","Cejas":"Cejas definidas y peinadas todo el día.","Skincare":"Cuidado de la piel con ingredientes activos. Úsalo según las indicaciones del empaque.","Protección solar":"Protección diaria contra el sol. Reaplica cada 2 horas si estás al aire libre."};
+const POL={
+nosotros:`<h3>Quiénes somos</h3><p>VelvetTouch es una tienda online de maquillaje y skincare con marcas internacionales, con envíos a toda Colombia. Te atendemos personalmente por WhatsApp: 318 631 5735.</p>`,
+faq:`<h3>Preguntas frecuentes</h3><details><summary>¿Cómo elijo mi tono?</summary>En bases y correctores eliges el tono al agregar el producto. Si dudas, escríbenos por WhatsApp con una foto a luz natural y te asesoramos.</details><details><summary>¿Cómo pago?</summary>Directamente en la página, en la pasarela segura Wompi: tarjeta de crédito o débito, Nequi, PSE o Botón Bancolombia.</details><details><summary>¿Cómo sé que mi pago llegó?</summary>Al pagar verás la confirmación en pantalla y te escribimos por WhatsApp para coordinar tu envío.</details><details><summary>¿Cuánto tarda mi pedido?</summary>Depende de tu ciudad, entre 1 y 8 días hábiles después de confirmar el pago.</details><details><summary>¿Envían fuera de Colombia?</summary>No, por ahora solo hacemos envíos dentro de Colombia.</details><details><summary>¿Puedo cambiar un producto?</summary>Consulta nuestra política de cambios y devoluciones.</details>`,
+envios:`<h3>Envíos</h3><p>Enviamos únicamente dentro de Colombia. Despachamos 1 a 2 días hábiles después de confirmar tu pago.</p><p><b>Envío gratis</b> en compras desde $250.000.</p><p>Costo y tiempo estimado según tu ciudad:<br>• Ciudades principales: $11.000 · 1 a 3 días hábiles<br>• Otras ciudades: $15.000 · 3 a 5 días hábiles<br>• Zonas de difícil acceso e islas: $25.000 · 5 a 8 días hábiles</p><p>Los tiempos son estimados y pueden variar por la transportadora.</p>`,
+cambios:`<h3>Cambios y devoluciones</h3><p>Si tu producto llega con defecto, golpeado o es diferente al que pediste, escríbenos por WhatsApp dentro de los 5 días hábiles siguientes a la entrega, con fotos y tu número de pedido, y lo solucionamos.</p><p>Por higiene y salud, no aceptamos cambios ni devoluciones de productos de maquillaje o cuidado personal abiertos o usados, salvo defecto de fábrica. Para cambios de tono, el producto debe estar sellado y en su empaque original.</p><p>Tienes derecho de retracto en compras a distancia, según la Ley 1480 de 2011 y sus excepciones. Escríbenos y te explicamos el proceso.</p>`,
+datos:`<h3>Política de tratamiento de datos personales</h3><p>De acuerdo con la Ley 1581 de 2012, VelvetTouch es responsable del tratamiento de tus datos (nombre, celular, ciudad y dirección), que usamos solo para procesar tu pedido, coordinar la entrega y contactarte sobre tu compra.</p><p>No guardamos datos de tarjetas: los pagos se hacen en la pasarela segura Wompi. Tus datos no se venden ni se comparten, salvo con la pasarela de pago y la transportadora, para cobrar y entregar tu pedido.</p><p>Tienes derecho a conocer, actualizar, rectificar y solicitar la supresión de tus datos, y a revocar tu autorización. Escríbenos al WhatsApp 318 631 5735.</p>`,
+terminos:`<h3>Términos y condiciones</h3><p>• Los precios están en pesos colombianos (COP) con IVA incluido.<br>• Los productos están sujetos a disponibilidad.<br>• Tu pedido se confirma cuando verificamos tu pago.<br>• Medios de pago: tarjeta de crédito o débito, Nequi, PSE y Botón Bancolombia, procesados por Wompi.<br>• Black Days: 15% en productos seleccionados, del 7 al 27 de octubre de 2026 o hasta agotar existencias.<br>• Los descuentos y códigos promocionales no son acumulables, salvo que se indique. El código BELLA10 aplica a la primera compra.<br>• Las fotos son de referencia; el empaque puede variar según el lote.<br>• Al comprar aceptas estos términos y la política de datos.</p>`};
+function pol(k){$("plb").innerHTML=POL[k]+'<button class="btn" style="width:100%;margin-top:12px" onclick="plX()">Cerrar</button>';$("pl").classList.add("open")}
+function plX(){$("pl").classList.remove("open")}
+// favoritos y carrito persistentes
+let fav=[];try{fav=JSON.parse(localStorage.getItem("vfav")||"[]")}catch(e){}
+try{const c=JSON.parse(localStorage.getItem("vcart")||"{}");Object.keys(c).forEach(k=>{if(P[parseInt(k)]&&c[k]>0)cart[k]=c[k]})}catch(e){}
+function tf(i){fav=fav.includes(i)?fav.filter(x=>x!=i):[...fav,i];try{localStorage.setItem("vfav",JSON.stringify(fav))}catch(e){};render()}
+// catálogo
+cats.splice(3,0,"Favoritos");
+$("nav").innerHTML=cats.map(c=>`<a data-c="${c}">${c=="Favoritos"?"♡ Favoritos":c}</a>`).join("");
+window.render=function(){
+ document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.c===cur));
+ let l=P.filter(p=>{const ok=cur=="Todo"||(cur=="Black Days"?p.off>0:cur=="2x1 Skincare"?(DOS.includes(p.br)&&p.cat=="Skincare"):cur=="Favoritos"?fav.includes(p.id):p.cat==cur);return ok&&(!$("br").value||p.br==$("br").value)&&(p.nm+p.br).toLowerCase().includes($("q").value.toLowerCase())});
+ if($("so").value)l.sort((a,b)=>$("so").value=="a"?fin(a)-fin(b):fin(b)-fin(a));
+ $("g").innerHTML=l.map(p=>{const ag=AGOTADOS.includes(p.nm);return`<div class="card"><div class="ph" style="cursor:pointer" onclick="det(${p.id})"><img src="${p.img}" alt="${p.nm}">${p.off?`<div class="tag">-${p.off}% BLACK DAYS</div>`:""}<button class="fv ${fav.includes(p.id)?"on":""}" onclick="event.stopPropagation();tf(${p.id})" aria-label="Favorito">♥</button>${ag?'<div class="sold">Agotado</div>':""}</div><div class="br">${p.br}</div><div class="nm" style="cursor:pointer" onclick="det(${p.id})">${p.nm}</div><div>${p.off?`<span class="old">${cop(p.pr)}</span>`:""}<b>${cop(fin(p))}</b></div><button class="add" ${ag?"disabled":""} onclick="${hasTono(p)?`det(${p.id})`:`add(${p.id})`}">${ag?"Agotado":hasTono(p)?"Elegir tono":"Agregar"}</button></div>`}).join("")||"<p style='grid-column:1/-1;text-align:center;color:var(--mu)'>No hay productos aquí todavía</p>";
+};
+let _sh=null;
+window.det=function(i){const p=P[i],ag=AGOTADOS.includes(p.nm);_sh=null;_cp=i;
+ $("ckb").innerHTML=`<div class="dm"><div class="ph"><img id="dimg" src="${p.img}" alt="${p.nm}"></div><div class="br">${p.br}</div><h3>${p.nm}</h3><div style="margin-bottom:8px">${p.off?`<span class="old">${cop(p.pr)}</span>`:""}<b style="font-size:20px">${cop(fin(p))}</b></div><p class="steps">${DESC[p.cat]||""}</p>${hasTono(p)?`<b>Elige tu tono</b><div class="sw" id="sw">Toca un tono para ver la muestra</div><div class="tonos">${tset(p).map(([t,c])=>`<button class="tn" onclick="pickT(this,'${t}')"><i class="dot" style="background:${c}"></i>${t}</button>`).join("")}</div>`:""}<button class="btn" ${ag?"disabled":""} onclick="addD(${i})">${ag?"Agotado":"Agregar al carrito"}</button><button class="add" style="width:100%" onclick="ckX()">Cerrar</button></div>`;
+ $("ck").classList.add("open")};
+function pickT(b,t){_sh=t;document.querySelectorAll(".tn").forEach(x=>x.classList.toggle("on",x===b));
+ const w=$("sw");const c=tset(P[_cp]).find(x=>x[0]==t)[1];w.style.background=c;w.style.color=lum(c)>150?"#3a2230":"#fff";w.textContent="Tono: "+t;
+ const im=(SHADEIMG[P[_cp].nm]||{})[t];$("dimg").src=im||P[_cp].img}
+function addD(i){if(hasTono(P[i])&&!_sh){alert("Elige tu tono 💗");return}add(i,_sh);ckX()}
+// carrito
+window.add=function(i,sh){const k=sh?i+"|"+sh:""+i;cart[k]=(cart[k]||0)+1;draw();$("drawer").classList.add("open")};
+window.ch=function(k,d){cart[k]+=d;if(cart[k]<=0)delete cart[k];draw()};
+function calc(){let s=0,d2=0;Object.keys(cart).forEach(k=>{const p=P[parseInt(k)],q=cart[k];s+=fin(p)*q;if(DOS.includes(p.br)&&p.cat=="Skincare")d2+=Math.floor(q/2)*fin(p)});return{s,d:(s-d2)*disc+d2}}
+window.draw=function(){const ks=Object.keys(cart),{s,d}=calc();
+ $("its").innerHTML=ks.map(k=>{const p=P[parseInt(k)],x=k.split("|")[1];return`<div class="it"><div><small>${p.br}</small><br>${p.nm}${x?`<br><small>Tono: ${x}</small>`:""}</div><div class="q"><button onclick="ch('${k}',-1)">−</button> ${cart[k]} <button onclick="ch('${k}',1)">+</button><br>${cop(fin(p)*cart[k])}</div></div>`}).join("")||"<p style='color:var(--mu)'>Tu carrito está vacío</p>";
+ $("n").textContent=ks.reduce((a,k)=>a+cart[k],0);$("sb").textContent=cop(s);$("ds").textContent="-"+cop(d);
+ $("en").textContent=s==0?"—":(s-d>=250000?"Gratis":"Según tu ciudad");$("tt").textContent=cop(s-d);
+ try{localStorage.setItem("vcart",JSON.stringify(cart))}catch(e){}};
+// envío por ciudad
+function zona(c){if(!c)return null;if(c=="Otra")return COSTOS.B;const n=c.split(" (")[0];return ZA.includes(n)?COSTOS.A:ZC.includes(n)?COSTOS.C:COSTOS.B}
+function shipFor(c){const z=zona(c),{s,d}=calc();return !z?0:(s-d>=250000?0:z[0])}
+function upShip(){const c=$("ckc").value,z=zona(c),{s,d}=calc(),e=shipFor(c);
+ $("cke").textContent=!z?"Elige tu ciudad":(e?cop(e):"Gratis");
+ $("ckz").textContent=z?"Entrega estimada: "+z[1]+(c=="Otra"?" (confirmamos el costo por WhatsApp)":""):"";
+ $("ckt2").textContent=cop(s-d+e)}
+const _o=openCk;
+window.openCk=function(){if(!Object.keys(cart).length){alert("Tu carrito está vacío");return}
+ _o();const box=$("ckb"),tr=[...box.querySelectorAll(".row")].pop();
+ tr.insertAdjacentHTML("beforebegin",'<div class="row"><span>Envío</span><span id="cke">Elige tu ciudad</span></div><div class="steps" id="ckz"></div>');
+ tr.innerHTML='<b>Total a pagar</b><b id="ckt2">'+$("tt").textContent+'</b>';
+ box.querySelector("button.btn").insertAdjacentHTML("beforebegin",'<label class="steps" style="display:block;margin:8px 0"><input type="checkbox" id="ckok"> Acepto la <a href="#" onclick="pol(\'datos\');return false" style="color:var(--ac)">política de datos</a> y los <a href="#" onclick="pol(\'terminos\');return false" style="color:var(--ac)">términos</a></label>');
+ $("ckc").addEventListener("change",upShip)};
+window.ckGo=function(){
+ const n=$("ckn").value.trim(),t=$("ckt").value.trim(),dir=$("cka").value.trim(),cv=$("ckc").value,c=(cv=="Otra"?$("cko").value.trim():cv);
+ if(!n||!t||!c||!dir||!cv){alert("Completa tus datos de entrega");return}
+ if(!$("ckok").checked){alert("Debes aceptar la política de datos y los términos");return}
+ const pm=document.querySelector('input[name=pm]:checked').value,{s,d}=calc(),tot=cop(s-d+shipFor(cv));
+ const L=Object.keys(cart).map(k=>{const p=P[parseInt(k)],x=k.split("|")[1];return`• ${cart[k]} x ${p.br} ${p.nm}${x?` (Tono: ${x})`:""}`}).join("\n");
+ const msg=`Hola! Quiero confirmar mi pedido 💕\n\n${L}\n\nTotal: ${tot}\nPago: ${pm}\n\nNombre: ${n}\nCelular: ${t}\nCiudad: ${c}, Colombia\nDirección: ${dir}\n\nTe envío el comprobante de pago.`;
+ const wa=m=>`https://wa.me/57${CFG.num}?text=${encodeURIComponent(m)}`;
+ if(pm=="Tarjeta"){$("ckb").innerHTML=`<h3>Pago con tarjeta</h3><p class="steps">1. Pulsa el botón y envíanos tu pedido por WhatsApp.<br>2. Te respondemos con un <b>link de pago seguro</b> por el valor exacto de <b>${tot}</b>.<br>3. Pagas con tu tarjeta Visa o Mastercard (crédito o débito) y despachamos tu pedido.</p><a class="btn" style="display:block;text-align:center;text-decoration:none;margin-top:8px" target="_blank" rel="noopener" href="${wa(msg.replace("Te envío el comprobante de pago.","Quiero pagar con tarjeta, por favor envíame el link de pago."))}">Enviar pedido por WhatsApp</a><button class="add" style="width:100%;margin-top:8px" onclick="ckX()">Cerrar</button>`;return}
+ $("ckb").innerHTML=`<h3>Paga con ${pm}</h3><p class="steps">1. Abre ${pm} y envía <b>${tot}</b> a este número:</p><div class="num">${num()}</div><button class="add" style="width:100%" onclick="try{navigator.clipboard.writeText('${CFG.num}')}catch(e){};this.textContent='¡Copiado!'">Copiar número</button><p class="steps">2. Toma captura del comprobante.<br>3. Pulsa el botón y envíanos el pedido por WhatsApp junto con el comprobante. Confirmamos tu pago y despachamos.</p><a class="btn" style="display:block;text-align:center;text-decoration:none;margin-top:8px" target="_blank" rel="noopener" href="${wa(msg)}">Enviar pedido por WhatsApp</a><button class="add" style="width:100%;margin-top:8px" onclick="ckX()">Cerrar</button>`};
+// contador Black Days
+function tick(){const ms=BLACK_END-new Date();if(ms<=0){$("cdw").style.display="none";return}const d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);$("cd").textContent=d+"d "+h+"h "+m+"m"}
+tick();setInterval(tick,30000);
+["q","br","so"].forEach(i=>$(i).oninput=render);
+render();draw();
+</script><script>
+// ===== Pago automático con Wompi (requiere /api/checkout y /api/webhook) =====
+const _o2=openCk;
+window.openCk=function(){_o2();const box=$("ckb");
+ box.querySelectorAll(".pm").forEach(x=>x.remove());
+ const b=[...box.querySelectorAll("b")].find(x=>x.textContent=="Método de pago");
+ if(b)b.outerHTML='<p class="steps">🔒 Pagas en la pasarela segura Wompi con tarjeta de crédito o débito, Nequi, PSE o Botón Bancolombia.</p>';
+ box.querySelector("button.btn").textContent="Ir a pagar"};
+window.ckGo=async function(){
+ const n=$("ckn").value.trim(),t=$("ckt").value.trim(),dir=$("cka").value.trim(),cv=$("ckc").value,c=(cv=="Otra"?$("cko").value.trim():cv);
+ if(!n||!t||!c||!dir||!cv){alert("Completa tus datos de entrega");return}
+ if(!$("ckok").checked){alert("Debes aceptar la política de datos y los términos");return}
+ const items=Object.keys(cart).map(k=>({id:parseInt(k),qty:cart[k],shade:k.split("|")[1]||null}));
+ $("ckb").innerHTML="<h3>Conectando con el pago seguro…</h3><p class='steps'>No cierres esta ventana.</p>";
+ try{const r=await fetch("/api/checkout",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({items,code:disc?"BELLA10":"",name:n,phone:t,city:c,address:dir})});
+  const j=await r.json();if(!j.url)throw new Error(j.error||"Error");location.href=j.url}
+ catch(e){alert("No pudimos iniciar el pago: "+e.message);openCk()}};
+</script><script>
+// ===== Ver más (24 productos por página) =====
+let shown=24,lastKey="";
+$("g").insertAdjacentHTML("afterend",'<div id="more" style="text-align:center;padding:0 5vw 50px"></div>');
+window.render=function(){
+ document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("on",a.dataset.c===cur));
+ const key=[cur,$("br").value,$("q").value,$("so").value].join("|");if(key!==lastKey){shown=24;lastKey=key}
+ let l=P.filter(p=>{const ok=cur=="Todo"||(cur=="Black Days"?p.off>0:cur=="2x1 Skincare"?(DOS.includes(p.br)&&p.cat=="Skincare"):cur=="Favoritos"?fav.includes(p.id):p.cat==cur);return ok&&(!$("br").value||p.br==$("br").value)&&(p.nm+p.br).toLowerCase().includes($("q").value.toLowerCase())});
+ if($("so").value)l.sort((a,b)=>$("so").value=="a"?fin(a)-fin(b):fin(b)-fin(a));
+ $("g").innerHTML=l.slice(0,shown).map(p=>{const ag=AGOTADOS.includes(p.nm);return`<div class="card"><div class="ph" style="cursor:pointer" onclick="det(${p.id})"><img src="${p.img}" alt="${p.nm}" loading="lazy" decoding="async">${p.off?`<div class="tag">-${p.off}% BLACK DAYS</div>`:""}<button class="fv ${fav.includes(p.id)?"on":""}" onclick="event.stopPropagation();tf(${p.id})" aria-label="Favorito">♥</button>${ag?'<div class="sold">Agotado</div>':""}</div><div class="br">${p.br}</div><div class="nm" style="cursor:pointer" onclick="det(${p.id})">${p.nm}</div><div>${p.off?`<span class="old">${cop(p.pr)}</span>`:""}<b>${cop(fin(p))}</b></div><button class="add" ${ag?"disabled":""} onclick="${hasTono(p)?`det(${p.id})`:`add(${p.id})`}">${ag?"Agotado":hasTono(p)?"Elegir tono":"Agregar"}</button></div>`}).join("")||"<p style='grid-column:1/-1;text-align:center;color:var(--mu)'>No hay productos aquí todavía</p>";
+ $("more").innerHTML=l.length>shown?`<button class="btn" onclick="shown+=24;render()">Ver más productos (${l.length-shown} más)</button>`:"";
+};
+["q","br","so"].forEach(i=>$(i).oninput=render);
+render();
+</script><script>
+// Al terminar Black Days (BLACK_END) los descuentos desaparecen solos
+let _bdOff=false;
+function expireBD(){if(_bdOff||new Date()<=BLACK_END)return;_bdOff=true;P.forEach(p=>p.off=0);
+ const w=$("bdw");if(w)w.style.display="none";const n=document.querySelector('[data-c="Black Days"]');if(n)n.remove();
+ const pr=document.querySelector('.promo[onclick*="Black Days"]');if(pr)pr.style.display="none";
+ if(cur=="Black Days")cur="Todo";render();draw()}
+expireBD();setInterval(expireBD,60000);
+</script></body></html>

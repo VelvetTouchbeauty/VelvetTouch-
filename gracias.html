@@ -1,0 +1,17 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tu pedido · VelvetTouch</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Jost&display=swap" rel="stylesheet">
+<style>body{margin:0;font:16px Jost,sans-serif;background:#fff0f6;color:#3a2230;display:grid;place-items:center;min-height:100vh;text-align:center;padding:20px}
+.c{background:#fff;border:1px solid #f9d6e6;border-radius:24px;padding:36px;max-width:420px}h1{font:italic 400 32px 'Playfair Display',serif;color:#f0589b;margin:0 0 10px}
+a{display:inline-block;margin-top:18px;background:#f0589b;color:#fff;border-radius:30px;padding:12px 26px;text-decoration:none}</style></head><body><div class="c"><h1 id="t">Revisando tu pago…</h1><p id="m"></p><a href="/">Volver a la tienda</a></div>
+<script>
+// Para pruebas usa "https://sandbox.wompi.co/v1"; en producción "https://production.wompi.co/v1"
+const WOMPI_API="https://production.wompi.co/v1";
+const ref=new URLSearchParams(location.search).get("ref");
+async function go(n){try{const r=await fetch(WOMPI_API+"/transactions?reference="+encodeURIComponent(ref));const j=await r.json();const x=(j.data||[])[0];const st=x&&x.status;
+ if(st=="APPROVED"){t.textContent="¡Pago recibido! 💗";m.textContent="Tu pedido "+ref+" está confirmado. Te escribiremos por WhatsApp para coordinar el envío.";try{localStorage.removeItem("vcart")}catch(e){}}
+ else if(st=="DECLINED"||st=="ERROR"||st=="VOIDED"){t.textContent="El pago no se pudo completar";m.textContent="No se hizo ningún cobro. Puedes intentarlo de nuevo desde la tienda."}
+ else if(n<10){t.textContent="Esperando confirmación…";m.textContent="Tu pago está en proceso.";setTimeout(()=>go(n+1),4000)}
+ else{t.textContent="Pago en proceso";m.textContent="Aún no tenemos la confirmación. Si te cobraron, escríbenos por WhatsApp con tu referencia "+ref+"."}}
+ catch(e){t.textContent="Gracias por tu compra";m.textContent="Escríbenos por WhatsApp con tu referencia "+ref+" para confirmar tu pedido."}}
+const t=document.getElementById("t"),m=document.getElementById("m");ref?go(0):(t.textContent="Gracias 💗");
+</script></body></html>
